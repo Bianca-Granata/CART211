@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Landing Page Prototype</title>
+    <title>Language library home page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,16 +17,17 @@
         }
 
         header {
-            background-color: #f2e4d7;
+            background-color: #fefefe;
             padding: 1rem;
             text-align: center;
+
         }
 
         nav {
             display: flex;
             justify-content: space-around;
             padding: 1rem;
-            background-color: #969d6c;
+            background-color: #585f34;
         }
 
         main {
@@ -42,7 +43,7 @@
         .cta-button {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background-color: #7caf84;
+            background-color: #585f34;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -55,13 +56,13 @@
         }
 
         .feature {
-            border: 1px solid #ccc;
+            border: 1px solid #614426;
             padding: 1rem;
             text-align: center;
         }
 
         footer {
-            background-color: #68754c;
+            background-color: #585f34;
             padding: 1rem;
             text-align: center;
         }
@@ -70,41 +71,46 @@
 
 <body>
     <header>
-        <h1>Logo</h1>
+        <div class="background"></div>
+        <img src="trees-6556336_1920.jpg" width="1220" height="150">
     </header>
     <nav>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
+        <a href="#Spanish">Spanish</a>
+        <a href="#Italian">Italian</a>
+        <a href="#French">French</a>
+        <a href="#Resources">Resources</a>
     </nav>
     <main>
         <section class="hero">
-            <h2>Hero & Image</h2>
-            <p>This is where your main message goes.</p>
-            <a href="#cta" class="cta-button">Call to Action</a>
+            <h2>Language Library</h2>
+            <p> main message</p>
         </section>
         <section class="feature-grid">
             <div class="feature">
-                <h3>Feature 1</h3>
-                <p>Description of feature 1</p>
+                <h3>Spanish</h3>
+                <p> Various learning resources for this language</p>
+                <a href="#cta" class="cta-button">Call to Action</a>
             </div>
             <div class="feature">
-                <h3>Feature 2</h3>
-                <p>Description of feature 2</p>
+                <h3>Italian</h3>
+                <p>Various learning resources for this language</p>
+                <a href="#cta" class="cta-button">Call to Action</a>
             </div>
             <div class="feature">
-                <h3>Feature 3</h3>
-                <p>Description of feature 3</p>
+                <h3>French</h3>
+                <p>Various learning resources for this language</p>
+                <a href="#cta" class="cta-button">Call to Action</a>
             </div>
             <div class="feature">
-                <h3>Feature 4</h3>
-                <p>Description of feature 4</p>
+                <h3>Resources</h3>
+                <p>Materials to help learn and practice when attempting to learn a new language</p>
+                <a href="#cta" class="cta-button">Call to Action</a>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p> Description about the website...</p>
     </footer>
 
     <script>
