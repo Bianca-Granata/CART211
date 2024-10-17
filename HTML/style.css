@@ -1,0 +1,43 @@
+/* Basic link color */
+a {
+    color: #ffffff;
+    /* Any color code you want */
+}
+
+/* Different states of links */
+a:link {
+    color: #ffffff;
+    /* Color for unvisited links */
+}
+
+a:visited {
+    color: #cbb298;
+    /* Color for visited links */
+}
+
+a:hover {
+    color: #338128;
+    /* Color when mouse hovers over link */
+}
+
+a:active {
+    color: #003d82;
+    /* Color when link is clicked */
+}
+
+/* If you want to style only navigation links */
+nav a {
+    color: #007bff;
+}
+
+/* Remove underline */
+nav a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Add underline only on hover */
+nav a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
