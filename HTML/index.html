@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing Page Prototype</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #f2e4d7;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+            background-color: #969d6c;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #7caf84;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .feature {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #68754c;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Logo</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section class="hero">
+            <h2>Hero & Image</h2>
+            <p>This is where your main message goes.</p>
+            <a href="#cta" class="cta-button">Call to Action</a>
+        </section>
+        <section class="feature-grid">
+            <div class="feature">
+                <h3>Feature 1</h3>
+                <p>Description of feature 1</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 2</h3>
+                <p>Description of feature 2</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 3</h3>
+                <p>Description of feature 3</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 4</h3>
+                <p>Description of feature 4</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple navigation
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = e.target.getAttribute('href').substring(1);
+                document.querySelector('main').innerHTML = `<h2>${page.charAt(0).toUpperCase() + page.slice(1)} Page</h2><p>This is the ${page} page content.</p>`;
+            });
+        });
+    </script>
+</body>
+
+</html>

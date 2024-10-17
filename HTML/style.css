@@ -1,0 +1,10 @@
+header {
+    background-image: url('cart211/index.html/images/logo.jpg');
+    /* Using placeholder for demo */
+    background-size: contain;
+    /* or 'cover' depending on your needs */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem;
+    text-align: center;
+}
