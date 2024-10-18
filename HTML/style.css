@@ -11,7 +11,7 @@ a:link {
 }
 
 a:visited {
-    color: #cbb298;
+    color: #ffffff;
     /* Color for visited links */
 }
 
@@ -21,7 +21,7 @@ a:hover {
 }
 
 a:active {
-    color: #003d82;
+    color: #baffc6;
     /* Color when link is clicked */
 }
 
@@ -40,4 +40,17 @@ nav a {
 nav a:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+.collapsible {
+    /* Change button appearance */
+    background-color: #618367;
+    padding: 18px;
+    font-size: 15px;
+}
+
+.collapsible-content {
+    /* Change content appearance */
+    padding: 0 18px;
+    background-color: white;
 }
