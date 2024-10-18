@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Language library home page</title>
     <style>
-        /** https://bianca-granata.github.io/CART211/HTML/index.html */
+        /* Your existing styles remain the same */
         body {
             font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
@@ -21,7 +20,6 @@
             background-color: #fefefe;
             padding: 1rem;
             text-align: center;
-
         }
 
         nav {
@@ -31,13 +29,12 @@
             background-color: #585f34;
         }
 
-        .Spanish-content {
+        .spanish-content {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Collapsible styles */
         .collapsible {
             background-color: #f1f1f1;
             color: #444;
@@ -60,7 +57,6 @@
 
         .collapsible:after {
             content: '\002B';
-            /* Plus sign */
             color: #777;
             font-weight: bold;
             float: right;
@@ -69,211 +65,6 @@
 
         .active:after {
             content: "\2212";
-            /* Minus sign */
-        }
-
-        .collapsible-content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            background-color: white;
-            border-radius: 0 0 5px 5px;
-        }
-
-        /* New styles for About page content */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Collapsible styles */
-        .collapsible {
-            background-color: #f1f1f1;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            margin: 5px 0;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .active,
-        .collapsible:hover {
-            background-color: #ddd;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            /* Plus sign */
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-            /* Minus sign */
-        }
-
-        .collapsible-content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            background-color: white;
-            border-radius: 0 0 5px 5px;
-        }
-
-        /* New styles for About page content */
-        .Italian-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Collapsible styles */
-        .collapsible {
-            background-color: #f1f1f1;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            margin: 5px 0;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .active,
-        .collapsible:hover {
-            background-color: #ddd;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            /* Plus sign */
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-            /* Minus sign */
-        }
-
-        .collapsible-content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            background-color: white;
-            border-radius: 0 0 5px 5px;
-        }
-
-        /* New styles for About page content */
-        .French-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Collapsible styles */
-        .collapsible {
-            background-color: #f1f1f1;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            margin: 5px 0;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .active,
-        .collapsible:hover {
-            background-color: #ddd;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            /* Plus sign */
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-            /* Minus sign */
-        }
-
-        .collapsible-content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            background-color: white;
-            border-radius: 0 0 5px 5px;
-        }
-
-        /* New styles for About page content */
-        .Resources-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Collapsible styles */
-        .collapsible {
-            background-color: #f1f1f1;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            margin: 5px 0;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .active,
-        .collapsible:hover {
-            background-color: #ddd;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            /* Plus sign */
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-            /* Minus sign */
         }
 
         .collapsible-content {
@@ -336,16 +127,16 @@
         <a href="#French">French</a>
         <a href="#Resources">Resources</a>
     </nav>
-    <main>
+    <main id="main-content">
         <section class="hero">
             <h2>Language Library</h2>
-            <p> main message</p>
+            <p>main message</p>
         </section>
         <section class="feature-grid">
             <div class="feature">
                 <h3>Spanish</h3>
-                <p> Various learning resources for this language</p>
-                <a href="#cta" class="cta-button">Call to Action</a>
+                <p>Various learning resources for this language</p>
+                <a href="#Spanish" class="cta-button" onclick="showSpanishContent(event)">Learn Spanish</a>
             </div>
             <div class="feature">
                 <h3>Italian</h3>
@@ -365,25 +156,76 @@
         </section>
     </main>
     <footer>
-        <p> Description about the website...</p>
+        <p>Description about the website...</p>
     </footer>
 
     <script>
+        // Store the Spanish page content
+        const spanishPageContent = `
+            <div class="spanish-content">
+                <h1>Learning guide</h1>
+                <p>materials for each level of learning</p>
+                
+                <button class="collapsible">Articles & Books</button>
+                <div class="collapsible-content">
+                    <p>here would go a list of links with books and articles.</p>
+                </div>
 
+                <button class="collapsible">Podcasts & Audios</button>
+                <div class="collapsible-content">
+                    <p>Here would go links to podcasts and audios</p>
+                </div>
+
+                <button class="collapsible">Practice</button>
+                <div class="collapsible-content">
+                    <p>link to practice materials</p>
+                </div>
+            </div>
+        `;
+
+        // Function to show Spanish content
+        function showSpanishContent(event) {
+            event.preventDefault();
+            document.getElementById('main-content').innerHTML = spanishPageContent;
+            initializeCollapsibles();
+        }
+
+        // Navigation handling
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', (e) => {
                 if (link.id === 'home-link') {
-                    // Don't prevent default for home link - let it navigate to index.html
                     return;
                 }
-
-                // For other links, prevent default and show content dynamically
                 e.preventDefault();
                 const page = e.target.getAttribute('href').substring(1);
-                document.querySelector('main').innerHTML = `<h2>${page.charAt(0).toUpperCase() + page.slice(1)} Page</h2><p>This is the ${page} page content.</p>`;
+
+                if (page === 'Spanish') {
+                    document.getElementById('main-content').innerHTML = spanishPageContent;
+                    initializeCollapsibles();
+                } else {
+                    document.getElementById('main-content').innerHTML = `
+                        <h2>${page} Page</h2>
+                        <p>This is the ${page} page content.</p>
+                    `;
+                }
             });
         });
 
+        // Collapsible functionality
+        function initializeCollapsibles() {
+            const collapsibles = document.getElementsByClassName("collapsible");
+            for (let i = 0; i < collapsibles.length; i++) {
+                collapsibles[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    const content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        }
     </script>
 </body>
 
