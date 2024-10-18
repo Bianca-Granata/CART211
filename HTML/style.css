@@ -27,12 +27,12 @@ a:active {
 
 /* If you want to style only navigation links */
 nav a {
-    color: #007bff;
+    color: #ffffff;
 }
 
 /* Remove underline */
 nav a {
-    color: #007bff;
+    color: #ffffff;
     text-decoration: none;
 }
 
