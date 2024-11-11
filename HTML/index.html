@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language library home page</title>
     <style>
-        /* Your existing styles remain the same */
         body {
             font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
@@ -29,7 +28,7 @@
             background-color: #585f34;
         }
 
-        .spanish-content {
+        .content-page {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
@@ -136,22 +135,22 @@
             <div class="feature">
                 <h3>Spanish</h3>
                 <p>Various learning resources for this language</p>
-                <a href="#Spanish" class="cta-button" onclick="showSpanishContent(event)">Learn Spanish</a>
+                <a href="#Spanish" class="cta-button" onclick="showContent(event, 'spanish')">Learn Spanish</a>
             </div>
             <div class="feature">
                 <h3>Italian</h3>
                 <p>Various learning resources for this language</p>
-                <a href="#cta" class="cta-button">Call to Action</a>
+                <a href="#Italian" class="cta-button" onclick="showContent(event, 'italian')">Learn Italian</a>
             </div>
             <div class="feature">
                 <h3>French</h3>
                 <p>Various learning resources for this language</p>
-                <a href="#cta" class="cta-button">Call to Action</a>
+                <a href="#French" class="cta-button" onclick="showContent(event, 'french')">Learn French</a>
             </div>
             <div class="feature">
                 <h3>Resources</h3>
                 <p>Materials to help learn and practice when attempting to learn a new language</p>
-                <a href="#cta" class="cta-button">Call to Action</a>
+                <a href="#Resources" class="cta-button" onclick="showContent(event, 'resources')">View Resources</a>
             </div>
         </section>
     </main>
@@ -160,33 +159,103 @@
     </footer>
 
     <script>
-        // Store the Spanish page content
-        const spanishPageContent = `
-            <div class="spanish-content">
-                <h1>Learning guide</h1>
-                <p>materials for each level of learning</p>
-                
-                <button class="collapsible">Articles & Books</button>
-                <div class="collapsible-content">
-                    <p>here would go a list of links with books and articles.</p>
-                </div>
+        // Store page contents
+        const pageContents = {
+            spanish: `
+                <div class="content-page">
+                    <h1>Spanish Learning Guide</h1>
+                    <p>Materials for each level of learning</p>
+                    
+                    <button class="collapsible">Articles & Books</button>
+                    <div class="collapsible-content">
+                        <p>Here would go a list of links with books and articles.</p>
+                    </div>
 
-                <button class="collapsible">Podcasts & Audios</button>
-                <div class="collapsible-content">
-                    <p>Here would go links to podcasts and audios</p>
-                </div>
+                    <button class="collapsible">Podcasts & Audios</button>
+                    <div class="collapsible-content">
+                        <p>Here would go links to podcasts and audios</p>
+                    </div>
 
-                <button class="collapsible">Practice</button>
-                <div class="collapsible-content">
-                    <p>link to practice materials</p>
+                    <button class="collapsible">Practice</button>
+                    <div class="collapsible-content">
+                        <p>Link to practice materials</p>
+                    </div>
                 </div>
-            </div>
-        `;
+            `,
+            italian: `
+                <div class="content-page">
+                    <h1>Italian Learning Guide</h1>
+                    <p>Materials for each level of learning</p>
+                    
+                    <button class="collapsible">Learning Materials</button>
+                    <div class="collapsible-content">
+                        <p>Italian textbooks, reading materials, and study guides.</p>
+                    </div>
 
-        // Function to show Spanish content
-        function showSpanishContent(event) {
+                    <button class="collapsible">Audio Resources</button>
+                    <div class="collapsible-content">
+                        <p>Italian language podcasts, audiobooks, and pronunciation guides.</p>
+                    </div>
+
+                    <button class="collapsible">Practice Exercises</button>
+                    <div class="collapsible-content">
+                        <p>Interactive exercises, quizzes, and writing prompts.</p>
+                    </div>
+                </div>
+            `,
+            french: `
+                <div class="content-page">
+                    <h1>French Learning Guide</h1>
+                    <p>Materials for each level of learning</p>
+                    
+                    <button class="collapsible">Study Materials</button>
+                    <div class="collapsible-content">
+                        <p>French textbooks, literature, and learning guides.</p>
+                    </div>
+
+                    <button class="collapsible">Audio Learning</button>
+                    <div class="collapsible-content">
+                        <p>French language podcasts, music, and listening exercises.</p>
+                    </div>
+
+                    <button class="collapsible">Practice Activities</button>
+                    <div class="collapsible-content">
+                        <p>Grammar exercises, vocabulary drills, and conversation practice.</p>
+                    </div>
+                </div>
+            `,
+            resources: `
+                <div class="content-page">
+                    <h1>Learning Resources</h1>
+                    <p>General resources for language learning</p>
+                    
+                    <button class="collapsible">General Language Tools</button>
+                    <div class="collapsible-content">
+                        <p>Dictionary apps, translation tools, and language exchange platforms.</p>
+                    </div>
+
+                    <button class="collapsible">Multimedia Resources</button>
+                    <div class="collapsible-content">
+                        <p>Language learning videos, movies, and TV shows.</p>
+                    </div>
+
+                    <button class="collapsible">Study Guides</button>
+                    <div class="collapsible-content">
+                        <p>Learning strategies, study tips, and exam preparation materials.</p>
+                    </div>
+
+                    <button class="collapsible">Learning Plans</button>
+                    <div class="collapsible-content">
+                        <p>Structured learning paths and progress tracking tools.</p>
+                    </div>
+                </div>
+            `
+        };
+
+        // Function to show content for each section
+        function showContent(event, page) {
             event.preventDefault();
-            document.getElementById('main-content').innerHTML = spanishPageContent;
+            document.getElementById('main-content').innerHTML = pageContents[page];
             initializeCollapsibles();
         }
 
@@ -197,17 +266,8 @@
                     return;
                 }
                 e.preventDefault();
-                const page = e.target.getAttribute('href').substring(1);
-
-                if (page === 'Spanish') {
-                    document.getElementById('main-content').innerHTML = spanishPageContent;
-                    initializeCollapsibles();
-                } else {
-                    document.getElementById('main-content').innerHTML = `
-                        <h2>${page} Page</h2>
-                        <p>This is the ${page} page content.</p>
-                    `;
-                }
+                const page = e.target.getAttribute('href').substring(1).toLowerCase();
+                showContent(e, page);
             });
         });
 
