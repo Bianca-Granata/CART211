@@ -35,7 +35,7 @@
         }
 
         .collapsible {
-            background-color: #f1f1f1;
+            background-color: #b7b681;
             color: #444;
             cursor: pointer;
             padding: 18px;
@@ -51,7 +51,7 @@
 
         .active,
         .collapsible:hover {
-            background-color: #ddd;
+            background-color: #bad28a;
         }
 
         .collapsible:after {
@@ -71,7 +71,7 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
-            background-color: white;
+            background-color: rgb(220, 228, 165);
             border-radius: 0 0 5px 5px;
         }
 
@@ -111,6 +111,30 @@
             padding: 1rem;
             text-align: center;
         }
+
+        a:link {
+            color: rgb(255, 243, 210);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(236, 245, 236);
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: rgb(187, 232, 183);
+            background-color: transparent;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -129,33 +153,33 @@
     <main id="main-content">
         <section class="hero">
             <h2>Language Library</h2>
-            <p>main message</p>
+            <p> Compilation of resources for language learning for all levels fom beginner to advanced.</p>
         </section>
         <section class="feature-grid">
             <div class="feature">
                 <h3>Spanish</h3>
-                <p>Various learning resources for this language</p>
+                <!--<p>Online available resources: Books, websites, apps, youtube channels</p> -->
                 <a href="#Spanish" class="cta-button" onclick="showContent(event, 'spanish')">Learn Spanish</a>
             </div>
             <div class="feature">
                 <h3>Italian</h3>
-                <p>Various learning resources for this language</p>
+                <!-- <p>Various learning resources for this language</p> -->
                 <a href="#Italian" class="cta-button" onclick="showContent(event, 'italian')">Learn Italian</a>
             </div>
             <div class="feature">
                 <h3>French</h3>
-                <p>Various learning resources for this language</p>
+                <!-- <p>Various learning resources for this language</p> -->
                 <a href="#French" class="cta-button" onclick="showContent(event, 'french')">Learn French</a>
             </div>
             <div class="feature">
                 <h3>Resources</h3>
-                <p>Materials to help learn and practice when attempting to learn a new language</p>
+                <!--<p>Materials to help learn and practice when attempting to learn a new language</p> -->
                 <a href="#Resources" class="cta-button" onclick="showContent(event, 'resources')">View Resources</a>
             </div>
         </section>
     </main>
     <footer>
-        <p>Description about the website...</p>
+        <p>This website is a collection of different online resources that have been compiled into one place</p>
     </footer>
 
     <script>
@@ -164,11 +188,11 @@
             spanish: `
                 <div class="content-page">
                     <h1>Spanish Learning Guide</h1>
-                    <p>Materials for each level of learning</p>
+                    <p>Materials sorted by level</p>
                     
                     <button class="collapsible">Articles & Books</button>
                     <div class="collapsible-content">
-                        <p>Here would go a list of links with books and articles.</p>
+                        <p><b> Beginner Books</b> </p>
                     </div>
 
                     <button class="collapsible">Podcasts & Audios</button>
@@ -231,12 +255,26 @@
                     
                     <button class="collapsible">General Language Tools</button>
                     <div class="collapsible-content">
-                        <p>Dictionary apps, translation tools, and language exchange platforms.</p>
+                         <p><br><b>Beginner</b></br>
+                            <br> <b>1. </b>"Fluent in 3 Months" by Benny Lewis </br>
+                            Beginner friendly book on tips on how to achieve learning a new language.
+                            <br></br>
+                            <br><b>2.</b> Reverso</br>
+                            Good reliable translating tool.
+                            <br></br>
+                            <br><b>3.</b>DeepL</br>
+                            DeepL is a relaible translating webpage that offers translation to 28 different languages.
+                            <br></br>
+                            <br><b>4.</b></br>
+                            Dictionary apps, translation tools, and language exchange platforms.
+                            <br></br>
+                            <br><b>5.</b></br></p>
                     </div>
 
-                    <button class="collapsible">Multimedia Resources</button>
+                    <button class="collapsible">Apps Resources</button>
                     <div class="collapsible-content">
-                        <p>Language learning videos, movies, and TV shows.</p>
+                        <p><b>For every level:</b>
+                            <br></br></p>
                     </div>
 
                     <button class="collapsible">Study Guides</button>
