@@ -1,23 +1,50 @@
 nav a:link {
-    color: rgb(223, 255, 223);
+    color: rgb(19, 83, 19);
     background-color: transparent;
     text-decoration: none;
 }
 
 nav a:visited {
-    color: rgb(255, 255, 255);
+    color: rgb(37, 85, 38);
     background-color: transparent;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: rgb(255, 255, 255);
+    color: rgb(34, 77, 37);
     background-color: transparent;
     text-decoration: underline;
 }
 
-nav a:active {
+a:active {
     color: yellow;
     background-color: transparent;
     text-decoration: underline;
+}
+
+
+
+/* Update link styles to handle the CTA buttons specifically */
+a.cta-button:link {
+    color: #ffffff;
+    background-color: #585f34;
+    text-decoration: none;
+}
+
+a.cta-button:visited {
+    color: #ffffff;
+    background-color: #585f34;
+    text-decoration: none;
+}
+
+a.cta-button:hover {
+    background-color: #6b7340;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.cta-button:active {
+    background-color: #4a5129;
+    color: #ffffff;
+    text-decoration: none;
 }
