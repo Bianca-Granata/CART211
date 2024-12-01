@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language library home page</title>
+    <!--Below is basically the features that are implemented on the website
+    and details, such as the color theme, font, the pages, collapsibles, the cta buttons that lead to the
+    other pages and the information regarding what happens with the links-->
     <style>
+        /* the overall set up of the page with text details */
         body {
             font-family: 'Times New Roman', Times, serif, sans-serif;
             margin: 0;
@@ -34,6 +38,7 @@
             padding: 20px;
         }
 
+        /*details on the collapsible  */
         .collapsible {
             background-color: #b7b681;
             color: #444;
@@ -49,23 +54,26 @@
             transition: 0.3s;
         }
 
+        /*cool detail on having the mouse over it and it changes color */
         .active,
         .collapsible:hover {
             background-color: #bad28a;
         }
 
+        /* The little +/- at the end of the collapsible */
         .collapsible:after {
             content: '\002B';
-            color: #777;
+            color: #ffffff;
             font-weight: bold;
             float: right;
             margin-left: 5px;
         }
 
+        /* i forgot what this was for????
         .active:after {
             content: "\2212";
         }
-
+        */
         .collapsible-content {
             padding: 0 18px;
             max-height: 0;
@@ -85,6 +93,7 @@
             margin-bottom: 2rem;
         }
 
+        /* details on the buttons on the main page and their links*/
         .cta-button {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -94,7 +103,7 @@
             border-radius: 5px;
         }
 
-        /* Update link styles to handle the CTA buttons specifically */
+
         a.cta-button:link {
             color: #ffffff;
             background-color: #585f34;
@@ -162,13 +171,16 @@
         }
     </style>
 </head>
+<!-- added the background image-->
 
 <body>
     <header>
         <div class="background"></div>
+        <!-- background image from pixabay-->
         <img src="trees-6556336_1920.jpg" width="1220" height="150">
     </header>
-    <nav>
+    <nav> <!--The links at the top of the main page that bring you to the individal pages
+        access the materials-->
         <a href="index.html" id="home-link">Home</a>
         <a href="#Spanish">Spanish</a>
         <a href="#Italian">Italian</a>
@@ -176,10 +188,13 @@
         <a href="#Resources">Resources</a>
     </nav>
     <main id="main-content">
+        <!--Main page content with the title and the short description at the center-->
         <section class="hero">
             <h2>Language Library</h2>
             <p> Compilation of resources for language learning for all levels fom beginner to advanced.</p>
         </section>
+        <!-- the quares that have also have the links to the pages, the same ones as the ones 
+         at the top menu, -->
         <section class="feature-grid">
             <div class="feature">
                 <h3>Spanish</h3>
@@ -208,13 +223,13 @@
     </footer>
 
     <script>
-        // Store page contents
+        // here is the page content where all the materials will be stored for the individual pages
         const pageContents = {
-            spanish: `
+            spanish: ` 
                 <div class="content-page">
                     <h1>Spanish Learning Guide</h1>
                     <p>Materials sorted by level</p>
-                    
+        
                     <button class="collapsible">Articles & Books</button>
                     <div class="collapsible-content">
                         <p><b> Beginner Books</b> The Everything Learning Spanish Book by Claudia O'Brien,
@@ -447,7 +462,7 @@
             `
         };
 
-        // Function to show content for each section
+        // Function to show the content for each part 
         function showContent(event, page) {
             event.preventDefault();
             document.getElementById('main-content').innerHTML = pageContents[page];
@@ -466,7 +481,7 @@
             });
         });
 
-        // Collapsible functionality
+        // making the collapsibles work
         function initializeCollapsibles() {
             const collapsibles = document.getElementsByClassName("collapsible");
             for (let i = 0; i < collapsibles.length; i++) {
